@@ -33,5 +33,7 @@ CREATE TABLE `user`(
  	playlistGenre BINARY (16) NOT NULL,
  	playlistTitle VARCHAR (32) NOT NULL,
  	INDEX (playlistId),
+	FOREIGN KEY (playlistArtistId) REFERENCES artist(artistId),
+	FOREIGN KEY (playlistGenre) REFERENCES artist(artistGenre),
  	PRIMARY KEY (playlistId)
  );
